@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bun Chat</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Login -->
+  <div id="login" class="login">
+    <div class="card">
+      <h1>🐰 Bun Chat</h1>
+      <p>Pick a name to get started</p>
+      <input id="username" placeholder="Your name..." maxlength="20" autofocus />
+      <button id="joinBtn">Join</button>
+    </div>
+  </div>
+
+  <!-- App -->
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="section">
+        <h3>Rooms</h3>
+        <ul id="roomList"></ul>
+      </div>
+      <div class="section">
+        <h3>Online · <span id="userCount">0</span></h3>
+        <ul id="userList"></ul>
+      </div>
+    </aside>
+
+    <main class="chat">
+      <header class="chat-header">
+        <h2 id="roomName"># general</h2>
+        <span id="status" class="status">connecting…</span>
+      </header>
+
+      <div id="messages" class="messages"></div>
+
+      <form id="messageForm" class="message-form">
+        <input id="messageInput" placeholder="Type a message…" autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
